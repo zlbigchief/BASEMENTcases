@@ -4,7 +4,7 @@
     "BASEHPC": {
       "BASEPLANE_2D": {
         "GEOMETRY": {
-          "mesh_file": "D:/BASEMENTcases/01_openchannel/trapezoidal_channel_mesh.2dm",
+          "mesh_file": "D:/BASEMENTcases/01_openchannelflow/trapezoidal_channel_mesh.2dm",
           "STRINGDEF": [
             {
               "name": "left",
@@ -48,19 +48,19 @@
                 "name": "Left",
                 "type": "uniform_out",
                 "string_name": "left",
-                "slope": 0.01
+                "slope": 0.05
               },
               {
                 "name": "Right",
                 "string_name": "right",
                 "type": "uniform_in",
                 "slope": 0.05,
-                "discharge": 100.0
+                "discharge": 1558.0
               }
             ]
           },
           "FRICTION": {
-            "default_friction": 0.0001,
+            "default_friction": 0.05,
             "type": "manning"
           }
         }
