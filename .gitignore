@@ -1,2 +1,5 @@
-# ignores all ConsoleLog*.txt files in all subdirectories of current working folder
+# ignores all ConsoleLog*.txt files in all subdirectories
 **/ConsoleLog*.txt
+
+# ignores all results.* files in all subdirectories
+**/results.*
