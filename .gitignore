@@ -1,0 +1,2 @@
+# ignores all ConsoleLog*.txt files in all subdirectories of current working folder
+**/ConsoleLog*.txt
