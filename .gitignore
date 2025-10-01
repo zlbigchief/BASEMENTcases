@@ -1,6 +1,8 @@
 # ignores all ConsoleLog*.txt files in all subdirectories
 **/ConsoleLog*.txt
 
-# ignores all results.* files in all subdirectories except results.json
-**/results.*
-!**/results.json
+# ignore all .h5 files
+**/*.h5
+
+# ignore all .xdmf files
+**/*.xdmf
