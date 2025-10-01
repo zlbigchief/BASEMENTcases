@@ -1,3 +1,0 @@
-# ignore files except *.pvsm file
-*.mp4
-!*.pvsm
