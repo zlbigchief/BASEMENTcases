@@ -40,3 +40,5 @@ Input files:
 - **results.json**: configuration file that specifies converting the results.h5 file (generated during simulation) into a .xdmf file. Technically it's not right to say 'convert' since the .xdmf file does not really store any data and must always be used with results.h5 placing in the same folder.
 
 Post-processing & visualization:
+- The .psvd file in /ParaView stores the pipeline of loading, processing and visualising data (.xdmf and the .h5 files in this case). After finish simulation simply opening this file in your ParaView.
+- The animation of water depth and velocity vector field form t = 0 to 110 s is saved in /ParaView folder as the .mp4 file.
