@@ -2,14 +2,14 @@
   <ServerManagerState version="6.0.1">
     <Proxy group="animation" type="AnimationScene" id="263" servers="16">
       <Property name="AnimationTime" id="263.AnimationTime" number_of_elements="1">
-        <Element index="0" value="160"/>
+        <Element index="0" value="75"/>
       </Property>
       <Property name="Cues" id="263.Cues" number_of_elements="1">
         <Proxy value="265"/>
         <Domain name="groups" id="263.Cues.groups"/>
       </Property>
       <Property name="EndTime" id="263.EndTime" number_of_elements="1">
-        <Element index="0" value="200"/>
+        <Element index="0" value="110"/>
       </Property>
       <Property name="ForceDisableCaching" id="263.ForceDisableCaching" number_of_elements="1">
         <Element index="0" value="0"/>
@@ -36,7 +36,7 @@
         <Domain name="bool" id="263.LockStartTime.bool"/>
       </Property>
       <Property name="Loop" id="263.Loop" number_of_elements="1">
-        <Element index="0" value="0"/>
+        <Element index="0" value="1"/>
         <Domain name="bool" id="263.Loop.bool"/>
       </Property>
       <Property name="NumberOfFrames" id="263.NumberOfFrames" number_of_elements="1">
@@ -166,7 +166,7 @@
       </Property>
       <Property name="Build" id="14669.Build"/>
       <Property name="ColorSpace" id="14669.ColorSpace" number_of_elements="1">
-        <Element index="0" value="2"/>
+        <Element index="0" value="5"/>
         <Domain name="enum" id="14669.ColorSpace.enum">
           <Entry value="0" text="RGB"/>
           <Entry value="1" text="HSV"/>
@@ -214,39 +214,39 @@
         <Domain name="range" id="14669.NumberOfTableValues.range"/>
       </Property>
       <Property name="RGBPoints" id="14669.RGBPoints" number_of_elements="36">
-        <Element index="0" value="-46.63098154925323"/>
+        <Element index="0" value="-2.5"/>
         <Element index="1" value="0.0564"/>
         <Element index="2" value="0.0564"/>
         <Element index="3" value="0.47"/>
-        <Element index="4" value="-38.62946805081893"/>
+        <Element index="4" value="-2.07102"/>
         <Element index="5" value="0.243"/>
         <Element index="6" value="0.46035"/>
         <Element index="7" value="0.81"/>
-        <Element index="8" value="-32.71203564465888"/>
+        <Element index="8" value="-1.7537725"/>
         <Element index="9" value="0.356814"/>
         <Element index="10" value="0.745025"/>
         <Element index="11" value="0.954368"/>
-        <Element index="12" value="-26.480356656688798"/>
+        <Element index="12" value="-1.4196775000000001"/>
         <Element index="13" value="0.6882"/>
         <Element index="14" value="0.93"/>
         <Element index="15" value="0.91791"/>
-        <Element index="16" value="-23.3154613081164"/>
+        <Element index="16" value="-1.25"/>
         <Element index="17" value="0.899496"/>
         <Element index="18" value="0.944646"/>
         <Element index="19" value="0.768657"/>
-        <Element index="20" value="-19.201391130527323"/>
+        <Element index="20" value="-1.0294349999999999"/>
         <Element index="21" value="0.957108"/>
         <Element index="22" value="0.833819"/>
         <Element index="23" value="0.508916"/>
-        <Element index="24" value="-13.702891992060025"/>
+        <Element index="24" value="-0.7346474999999999"/>
         <Element index="25" value="0.927521"/>
         <Element index="26" value="0.621439"/>
         <Element index="27" value="0.315357"/>
-        <Element index="28" value="-7.10464639485879"/>
+        <Element index="28" value="-0.38090000000000046"/>
         <Element index="29" value="0.8"/>
         <Element index="30" value="0.352"/>
         <Element index="31" value="0.16"/>
-        <Element index="32" value="0.000058933020426366056"/>
+        <Element index="32" value="0"/>
         <Element index="33" value="0.59"/>
         <Element index="34" value="0.0767"/>
         <Element index="35" value="0.119475"/>
@@ -393,35 +393,35 @@
         <Element index="1" value="0.0564"/>
         <Element index="2" value="0.0564"/>
         <Element index="3" value="0.47"/>
-        <Element index="4" value="3.509025013962045"/>
+        <Element index="4" value="2.193751015485307"/>
         <Element index="5" value="0.243"/>
         <Element index="6" value="0.46035"/>
         <Element index="7" value="0.81"/>
-        <Element index="8" value="6.104086352758549"/>
+        <Element index="8" value="3.8161157534338717"/>
         <Element index="9" value="0.356814"/>
         <Element index="10" value="0.745025"/>
         <Element index="11" value="0.954368"/>
-        <Element index="12" value="8.836959008918857"/>
+        <Element index="12" value="5.524636536497332"/>
         <Element index="13" value="0.6882"/>
         <Element index="14" value="0.93"/>
         <Element index="15" value="0.91791"/>
-        <Element index="16" value="10.224908544576802"/>
+        <Element index="16" value="6.3923464249070685"/>
         <Element index="17" value="0.899496"/>
         <Element index="18" value="0.944646"/>
         <Element index="19" value="0.768657"/>
-        <Element index="20" value="12.02911410708447"/>
+        <Element index="20" value="7.520288736274771"/>
         <Element index="21" value="0.957108"/>
         <Element index="22" value="0.833819"/>
         <Element index="23" value="0.508916"/>
-        <Element index="24" value="14.440454289152017"/>
+        <Element index="24" value="9.027795793660605"/>
         <Element index="25" value="0.927521"/>
         <Element index="26" value="0.621439"/>
         <Element index="27" value="0.315357"/>
-        <Element index="28" value="17.33408295745016"/>
+        <Element index="28" value="10.836817047216455"/>
         <Element index="29" value="0.8"/>
         <Element index="30" value="0.352"/>
         <Element index="31" value="0.16"/>
-        <Element index="32" value="20.449817089153605"/>
+        <Element index="32" value="12.784692849814137"/>
         <Element index="33" value="0.59"/>
         <Element index="34" value="0.0767"/>
         <Element index="35" value="0.119475"/>
@@ -838,11 +838,11 @@
         <Domain name="bool" id="14667.AllowDuplicateScalars.bool"/>
       </Property>
       <Property name="Points" id="14667.Points" number_of_elements="8">
-        <Element index="0" value="-46.63098154925323"/>
+        <Element index="0" value="-2.5"/>
         <Element index="1" value="0"/>
         <Element index="2" value="0.5"/>
         <Element index="3" value="0"/>
-        <Element index="4" value="0.000058933020426366056"/>
+        <Element index="4" value="0"/>
         <Element index="5" value="1"/>
         <Element index="6" value="0.5"/>
         <Element index="7" value="0"/>
@@ -866,7 +866,7 @@
         <Element index="1" value="0"/>
         <Element index="2" value="0.5"/>
         <Element index="3" value="0"/>
-        <Element index="4" value="20.449817089153605"/>
+        <Element index="4" value="12.784692849814137"/>
         <Element index="5" value="1"/>
         <Element index="6" value="0.5"/>
         <Element index="7" value="0"/>
@@ -11201,9 +11201,9 @@
         <Domain name="range" id="13659.Ambient.range"/>
       </Property>
       <Property name="AmbientColor" id="13659.AmbientColor" number_of_elements="3">
-        <Element index="0" value="1"/>
-        <Element index="1" value="1"/>
-        <Element index="2" value="1"/>
+        <Element index="0" value="0.3333333432674408"/>
+        <Element index="1" value="0.3333333432674408"/>
+        <Element index="2" value="0.49803921580314636"/>
         <Domain name="range" id="13659.AmbientColor.range"/>
       </Property>
       <Property name="Anisotropy" id="13659.Anisotropy" number_of_elements="1">
@@ -11391,9 +11391,9 @@
         <Domain name="range" id="13659.Diffuse.range"/>
       </Property>
       <Property name="DiffuseColor" id="13659.DiffuseColor" number_of_elements="3">
-        <Element index="0" value="1"/>
-        <Element index="1" value="1"/>
-        <Element index="2" value="1"/>
+        <Element index="0" value="0.3333333432674408"/>
+        <Element index="1" value="0.3333333432674408"/>
+        <Element index="2" value="0.49803921580314636"/>
         <Domain name="range" id="13659.DiffuseColor.range"/>
       </Property>
       <Property name="DisableLighting" id="13659.DisableLighting" number_of_elements="1">
@@ -11447,7 +11447,7 @@
         <Domain name="range" id="13659.FeatureAngle.range"/>
       </Property>
       <Property name="GaussianRadius" id="13659.GaussianRadius" number_of_elements="1">
-        <Element index="0" value="2.25"/>
+        <Element index="0" value="1.3275"/>
         <Domain name="range" id="13659.GaussianRadius.range"/>
       </Property>
       <Property name="GenerateNoiseTexture" id="13659.GenerateNoiseTexture" number_of_elements="1">
@@ -13777,7 +13777,7 @@
         <Domain name="range" id="14501.OcclusionStrength.range"/>
       </Property>
       <Property name="Opacity" id="14501.Opacity" number_of_elements="1">
-        <Element index="0" value="0.86"/>
+        <Element index="0" value="0.66"/>
         <Domain name="range" id="14501.Opacity.range"/>
       </Property>
       <Property name="OpacityArray" id="14501.OpacityArray" number_of_elements="5">
@@ -15395,10 +15395,10 @@
         <Element index="0" value="%-#6.1e"/>
       </Property>
       <Property name="DataRangeMax" id="13678.DataRangeMax" number_of_elements="1">
-        <Element index="0" value="7.17413330078125"/>
+        <Element index="0" value="7.752142906188965"/>
       </Property>
       <Property name="DataRangeMin" id="13678.DataRangeMin" number_of_elements="1">
-        <Element index="0" value="0.00812377966940403"/>
+        <Element index="0" value="0.008145809173583984"/>
       </Property>
       <Property name="DrawAnnotations" id="13678.DrawAnnotations" number_of_elements="1">
         <Element index="0" value="1"/>
@@ -15494,13 +15494,13 @@
         <Element index="0" value="0"/>
       </Property>
       <Property name="Position" id="13678.Position" number_of_elements="2">
-        <Element index="0" value="0.1745332412098875"/>
-        <Element index="1" value="0.6985897435897439"/>
+        <Element index="0" value="0.167214545268437"/>
+        <Element index="1" value="0.7908974358974362"/>
         <Domain name="range" id="13678.Position.range"/>
       </Property>
       <Property name="PositionInfo" id="13678.PositionInfo" number_of_elements="2">
-        <Element index="0" value="0.1745332412098875"/>
-        <Element index="1" value="0.6985897435897439"/>
+        <Element index="0" value="0.167214545268437"/>
+        <Element index="1" value="0.7908974358974362"/>
       </Property>
       <Property name="RangeLabelFormat" id="13678.RangeLabelFormat" number_of_elements="1">
         <Element index="0" value="%-#6.1e"/>
@@ -16821,28 +16821,30 @@
         <Element index="0" value="D:\BASEMENTcases\01_openchannelflow\results.xdmf"/>
         <Domain name="files" id="18223.FileNames.files"/>
       </Property>
-      <Property name="TimestepValues" id="18223.TimestepValues" number_of_elements="21">
+      <Property name="TimestepValues" id="18223.TimestepValues" number_of_elements="23">
         <Element index="0" value="0"/>
-        <Element index="1" value="10"/>
-        <Element index="2" value="20"/>
-        <Element index="3" value="30"/>
-        <Element index="4" value="40"/>
-        <Element index="5" value="50"/>
-        <Element index="6" value="60"/>
-        <Element index="7" value="70"/>
-        <Element index="8" value="80"/>
-        <Element index="9" value="90"/>
-        <Element index="10" value="100"/>
-        <Element index="11" value="110"/>
-        <Element index="12" value="120"/>
-        <Element index="13" value="130"/>
-        <Element index="14" value="140"/>
-        <Element index="15" value="150"/>
-        <Element index="16" value="160"/>
-        <Element index="17" value="170"/>
-        <Element index="18" value="180"/>
-        <Element index="19" value="190"/>
-        <Element index="20" value="200"/>
+        <Element index="1" value="5"/>
+        <Element index="2" value="10"/>
+        <Element index="3" value="15"/>
+        <Element index="4" value="20"/>
+        <Element index="5" value="25"/>
+        <Element index="6" value="30"/>
+        <Element index="7" value="35"/>
+        <Element index="8" value="40"/>
+        <Element index="9" value="45"/>
+        <Element index="10" value="50"/>
+        <Element index="11" value="55"/>
+        <Element index="12" value="60"/>
+        <Element index="13" value="65"/>
+        <Element index="14" value="70"/>
+        <Element index="15" value="75"/>
+        <Element index="16" value="80"/>
+        <Element index="17" value="85"/>
+        <Element index="18" value="90"/>
+        <Element index="19" value="95"/>
+        <Element index="20" value="100"/>
+        <Element index="21" value="105"/>
+        <Element index="22" value="110"/>
       </Property>
       <Property name="CellArrayInfo" id="18223.CellArrayInfo" number_of_elements="6">
         <Element index="0" value="flow_velocity"/>
@@ -16865,109 +16867,131 @@
           <String text="water_surface"/>
         </Domain>
       </Property>
-      <Property name="GridInfo" id="18223.GridInfo" number_of_elements="102">
+      <Property name="GridInfo" id="18223.GridInfo" number_of_elements="124">
         <Element index="0" value="@0.000000"/>
         <Element index="1" value="1"/>
         <Element index="2" value="@10.000000"/>
         <Element index="3" value="1"/>
         <Element index="4" value="@100.000000"/>
         <Element index="5" value="1"/>
-        <Element index="6" value="@110.000000"/>
+        <Element index="6" value="@105.000000"/>
         <Element index="7" value="1"/>
-        <Element index="8" value="@120.000000"/>
+        <Element index="8" value="@110.000000"/>
         <Element index="9" value="1"/>
-        <Element index="10" value="@130.000000"/>
+        <Element index="10" value="@120.000000"/>
         <Element index="11" value="1"/>
-        <Element index="12" value="@140.000000"/>
+        <Element index="12" value="@130.000000"/>
         <Element index="13" value="1"/>
-        <Element index="14" value="@150.000000"/>
+        <Element index="14" value="@140.000000"/>
         <Element index="15" value="1"/>
-        <Element index="16" value="@160.000000"/>
+        <Element index="16" value="@15.000000"/>
         <Element index="17" value="1"/>
-        <Element index="18" value="@170.000000"/>
+        <Element index="18" value="@150.000000"/>
         <Element index="19" value="1"/>
-        <Element index="20" value="@180.000000"/>
+        <Element index="20" value="@160.000000"/>
         <Element index="21" value="1"/>
-        <Element index="22" value="@190.000000"/>
+        <Element index="22" value="@170.000000"/>
         <Element index="23" value="1"/>
-        <Element index="24" value="@20.000000"/>
+        <Element index="24" value="@180.000000"/>
         <Element index="25" value="1"/>
-        <Element index="26" value="@200.000000"/>
+        <Element index="26" value="@190.000000"/>
         <Element index="27" value="1"/>
-        <Element index="28" value="@210.000000"/>
+        <Element index="28" value="@20.000000"/>
         <Element index="29" value="1"/>
-        <Element index="30" value="@220.000000"/>
+        <Element index="30" value="@200.000000"/>
         <Element index="31" value="1"/>
-        <Element index="32" value="@230.000000"/>
+        <Element index="32" value="@210.000000"/>
         <Element index="33" value="1"/>
-        <Element index="34" value="@240.000000"/>
+        <Element index="34" value="@220.000000"/>
         <Element index="35" value="1"/>
-        <Element index="36" value="@250.000000"/>
+        <Element index="36" value="@230.000000"/>
         <Element index="37" value="1"/>
-        <Element index="38" value="@260.000000"/>
+        <Element index="38" value="@240.000000"/>
         <Element index="39" value="1"/>
-        <Element index="40" value="@270.000000"/>
+        <Element index="40" value="@25.000000"/>
         <Element index="41" value="1"/>
-        <Element index="42" value="@280.000000"/>
+        <Element index="42" value="@250.000000"/>
         <Element index="43" value="1"/>
-        <Element index="44" value="@290.000000"/>
+        <Element index="44" value="@260.000000"/>
         <Element index="45" value="1"/>
-        <Element index="46" value="@30.000000"/>
+        <Element index="46" value="@270.000000"/>
         <Element index="47" value="1"/>
-        <Element index="48" value="@300.000000"/>
+        <Element index="48" value="@280.000000"/>
         <Element index="49" value="1"/>
-        <Element index="50" value="@310.000000"/>
+        <Element index="50" value="@290.000000"/>
         <Element index="51" value="1"/>
-        <Element index="52" value="@320.000000"/>
+        <Element index="52" value="@30.000000"/>
         <Element index="53" value="1"/>
-        <Element index="54" value="@330.000000"/>
+        <Element index="54" value="@300.000000"/>
         <Element index="55" value="1"/>
-        <Element index="56" value="@340.000000"/>
+        <Element index="56" value="@310.000000"/>
         <Element index="57" value="1"/>
-        <Element index="58" value="@350.000000"/>
+        <Element index="58" value="@320.000000"/>
         <Element index="59" value="1"/>
-        <Element index="60" value="@360.000000"/>
+        <Element index="60" value="@330.000000"/>
         <Element index="61" value="1"/>
-        <Element index="62" value="@370.000000"/>
+        <Element index="62" value="@340.000000"/>
         <Element index="63" value="1"/>
-        <Element index="64" value="@380.000000"/>
+        <Element index="64" value="@35.000000"/>
         <Element index="65" value="1"/>
-        <Element index="66" value="@390.000000"/>
+        <Element index="66" value="@350.000000"/>
         <Element index="67" value="1"/>
-        <Element index="68" value="@40.000000"/>
+        <Element index="68" value="@360.000000"/>
         <Element index="69" value="1"/>
-        <Element index="70" value="@400.000000"/>
+        <Element index="70" value="@370.000000"/>
         <Element index="71" value="1"/>
-        <Element index="72" value="@410.000000"/>
+        <Element index="72" value="@380.000000"/>
         <Element index="73" value="1"/>
-        <Element index="74" value="@420.000000"/>
+        <Element index="74" value="@390.000000"/>
         <Element index="75" value="1"/>
-        <Element index="76" value="@430.000000"/>
+        <Element index="76" value="@40.000000"/>
         <Element index="77" value="1"/>
-        <Element index="78" value="@440.000000"/>
+        <Element index="78" value="@400.000000"/>
         <Element index="79" value="1"/>
-        <Element index="80" value="@450.000000"/>
+        <Element index="80" value="@410.000000"/>
         <Element index="81" value="1"/>
-        <Element index="82" value="@460.000000"/>
+        <Element index="82" value="@420.000000"/>
         <Element index="83" value="1"/>
-        <Element index="84" value="@470.000000"/>
+        <Element index="84" value="@430.000000"/>
         <Element index="85" value="1"/>
-        <Element index="86" value="@480.000000"/>
+        <Element index="86" value="@440.000000"/>
         <Element index="87" value="1"/>
-        <Element index="88" value="@490.000000"/>
+        <Element index="88" value="@45.000000"/>
         <Element index="89" value="1"/>
-        <Element index="90" value="@50.000000"/>
+        <Element index="90" value="@450.000000"/>
         <Element index="91" value="1"/>
-        <Element index="92" value="@500.000000"/>
+        <Element index="92" value="@460.000000"/>
         <Element index="93" value="1"/>
-        <Element index="94" value="@60.000000"/>
+        <Element index="94" value="@470.000000"/>
         <Element index="95" value="1"/>
-        <Element index="96" value="@70.000000"/>
+        <Element index="96" value="@480.000000"/>
         <Element index="97" value="1"/>
-        <Element index="98" value="@80.000000"/>
+        <Element index="98" value="@490.000000"/>
         <Element index="99" value="1"/>
-        <Element index="100" value="@90.000000"/>
+        <Element index="100" value="@5.000000"/>
         <Element index="101" value="1"/>
+        <Element index="102" value="@50.000000"/>
+        <Element index="103" value="1"/>
+        <Element index="104" value="@500.000000"/>
+        <Element index="105" value="1"/>
+        <Element index="106" value="@55.000000"/>
+        <Element index="107" value="1"/>
+        <Element index="108" value="@60.000000"/>
+        <Element index="109" value="1"/>
+        <Element index="110" value="@65.000000"/>
+        <Element index="111" value="1"/>
+        <Element index="112" value="@70.000000"/>
+        <Element index="113" value="1"/>
+        <Element index="114" value="@75.000000"/>
+        <Element index="115" value="1"/>
+        <Element index="116" value="@80.000000"/>
+        <Element index="117" value="1"/>
+        <Element index="118" value="@85.000000"/>
+        <Element index="119" value="1"/>
+        <Element index="120" value="@90.000000"/>
+        <Element index="121" value="1"/>
+        <Element index="122" value="@95.000000"/>
+        <Element index="123" value="1"/>
       </Property>
       <Property name="GridStatus" id="18223.GridStatus" number_of_elements="102">
         <Element index="0" value="@0.000000"/>
@@ -17076,10 +17100,12 @@
           <String text="@0.000000"/>
           <String text="@10.000000"/>
           <String text="@100.000000"/>
+          <String text="@105.000000"/>
           <String text="@110.000000"/>
           <String text="@120.000000"/>
           <String text="@130.000000"/>
           <String text="@140.000000"/>
+          <String text="@15.000000"/>
           <String text="@150.000000"/>
           <String text="@160.000000"/>
           <String text="@170.000000"/>
@@ -17091,6 +17117,7 @@
           <String text="@220.000000"/>
           <String text="@230.000000"/>
           <String text="@240.000000"/>
+          <String text="@25.000000"/>
           <String text="@250.000000"/>
           <String text="@260.000000"/>
           <String text="@270.000000"/>
@@ -17102,6 +17129,7 @@
           <String text="@320.000000"/>
           <String text="@330.000000"/>
           <String text="@340.000000"/>
+          <String text="@35.000000"/>
           <String text="@350.000000"/>
           <String text="@360.000000"/>
           <String text="@370.000000"/>
@@ -17113,17 +17141,24 @@
           <String text="@420.000000"/>
           <String text="@430.000000"/>
           <String text="@440.000000"/>
+          <String text="@45.000000"/>
           <String text="@450.000000"/>
           <String text="@460.000000"/>
           <String text="@470.000000"/>
           <String text="@480.000000"/>
           <String text="@490.000000"/>
+          <String text="@5.000000"/>
           <String text="@50.000000"/>
           <String text="@500.000000"/>
+          <String text="@55.000000"/>
           <String text="@60.000000"/>
+          <String text="@65.000000"/>
           <String text="@70.000000"/>
+          <String text="@75.000000"/>
           <String text="@80.000000"/>
+          <String text="@85.000000"/>
           <String text="@90.000000"/>
+          <String text="@95.000000"/>
         </Domain>
       </Property>
       <Property name="PointArrayInfo" id="18223.PointArrayInfo"/>
@@ -17144,7 +17179,7 @@
     <Proxy group="misc" type="TimeKeeper" id="256" servers="16">
       <Property name="SuppressedTimeSources" id="256.SuppressedTimeSources"/>
       <Property name="Time" id="256.Time" number_of_elements="1">
-        <Element index="0" value="160"/>
+        <Element index="0" value="75"/>
         <Domain name="range" id="256.Time.range"/>
       </Property>
       <Property name="TimeLabel" id="256.TimeLabel" number_of_elements="1">
@@ -17152,7 +17187,7 @@
       </Property>
       <Property name="TimeRange" id="256.TimeRange" number_of_elements="2">
         <Element index="0" value="0"/>
-        <Element index="1" value="200"/>
+        <Element index="1" value="110"/>
       </Property>
       <Property name="TimeSources" id="256.TimeSources" number_of_elements="7">
         <Proxy value="18223"/>
@@ -17163,28 +17198,30 @@
         <Proxy value="14795"/>
         <Proxy value="18223"/>
       </Property>
-      <Property name="TimestepValues" id="256.TimestepValues" number_of_elements="21">
+      <Property name="TimestepValues" id="256.TimestepValues" number_of_elements="23">
         <Element index="0" value="0"/>
-        <Element index="1" value="10"/>
-        <Element index="2" value="20"/>
-        <Element index="3" value="30"/>
-        <Element index="4" value="40"/>
-        <Element index="5" value="50"/>
-        <Element index="6" value="60"/>
-        <Element index="7" value="70"/>
-        <Element index="8" value="80"/>
-        <Element index="9" value="90"/>
-        <Element index="10" value="100"/>
-        <Element index="11" value="110"/>
-        <Element index="12" value="120"/>
-        <Element index="13" value="130"/>
-        <Element index="14" value="140"/>
-        <Element index="15" value="150"/>
-        <Element index="16" value="160"/>
-        <Element index="17" value="170"/>
-        <Element index="18" value="180"/>
-        <Element index="19" value="190"/>
-        <Element index="20" value="200"/>
+        <Element index="1" value="5"/>
+        <Element index="2" value="10"/>
+        <Element index="3" value="15"/>
+        <Element index="4" value="20"/>
+        <Element index="5" value="25"/>
+        <Element index="6" value="30"/>
+        <Element index="7" value="35"/>
+        <Element index="8" value="40"/>
+        <Element index="9" value="45"/>
+        <Element index="10" value="50"/>
+        <Element index="11" value="55"/>
+        <Element index="12" value="60"/>
+        <Element index="13" value="65"/>
+        <Element index="14" value="70"/>
+        <Element index="15" value="75"/>
+        <Element index="16" value="80"/>
+        <Element index="17" value="85"/>
+        <Element index="18" value="90"/>
+        <Element index="19" value="95"/>
+        <Element index="20" value="100"/>
+        <Element index="21" value="105"/>
+        <Element index="22" value="110"/>
       </Property>
       <Property name="Views" id="256.Views" number_of_elements="1">
         <Proxy value="15014"/>
@@ -17208,7 +17245,7 @@
         <Element index="1" value="10"/>
       </Property>
       <Property name="Range" id="14668.Range" number_of_elements="4">
-        <Element index="0" value="-5"/>
+        <Element index="0" value="-2.5"/>
         <Element index="1" value="0"/>
         <Element index="2" value="0"/>
         <Element index="3" value="1"/>
@@ -17917,7 +17954,7 @@
         <Element index="1" value="780"/>
       </Property>
       <Property name="ViewTime" id="15014.ViewTime" number_of_elements="1">
-        <Element index="0" value="160"/>
+        <Element index="0" value="75"/>
         <Domain name="range" id="15014.ViewTime.range"/>
       </Property>
       <Property name="VolumeAnisotropy" id="15014.VolumeAnisotropy" number_of_elements="1">
@@ -17939,14 +17976,14 @@
         <Element index="0" value="0"/>
       </Property>
       <Property name="CameraFocalPoint" id="15014.CameraFocalPoint" number_of_elements="3">
-        <Element index="0" value="201.54032408086172"/>
-        <Element index="1" value="-46.58546391300864"/>
-        <Element index="2" value="49.5507636870217"/>
+        <Element index="0" value="191.11320844842822"/>
+        <Element index="1" value="-40.00882575092205"/>
+        <Element index="2" value="48.93172081746716"/>
       </Property>
       <Property name="CameraFocalPointInfo" id="15014.CameraFocalPointInfo" number_of_elements="3">
-        <Element index="0" value="201.54032408086172"/>
-        <Element index="1" value="-46.58546391300864"/>
-        <Element index="2" value="49.5507636870217"/>
+        <Element index="0" value="191.11320844842822"/>
+        <Element index="1" value="-40.00882575092205"/>
+        <Element index="2" value="48.93172081746716"/>
       </Property>
       <Property name="CameraParallelScale" id="15014.CameraParallelScale" number_of_elements="1">
         <Element index="0" value="228.28540264266664"/>
@@ -17955,14 +17992,14 @@
         <Element index="0" value="228.28540264266664"/>
       </Property>
       <Property name="CameraPosition" id="15014.CameraPosition" number_of_elements="3">
-        <Element index="0" value="-45.86424342989693"/>
-        <Element index="1" value="-537.8734335939462"/>
-        <Element index="2" value="295.226709741423"/>
+        <Element index="0" value="-166.25519838896065"/>
+        <Element index="1" value="-461.93989869662323"/>
+        <Element index="2" value="288.07927176783005"/>
       </Property>
       <Property name="CameraPositionInfo" id="15014.CameraPositionInfo" number_of_elements="3">
-        <Element index="0" value="-45.86424342989693"/>
-        <Element index="1" value="-537.8734335939462"/>
-        <Element index="2" value="295.226709741423"/>
+        <Element index="0" value="-166.25519838896065"/>
+        <Element index="1" value="-461.93989869662323"/>
+        <Element index="2" value="288.07927176783005"/>
       </Property>
       <Property name="CameraViewAngle" id="15014.CameraViewAngle" number_of_elements="1">
         <Element index="0" value="30"/>
@@ -17971,14 +18008,14 @@
         <Element index="0" value="30"/>
       </Property>
       <Property name="CameraViewUp" id="15014.CameraViewUp" number_of_elements="3">
-        <Element index="0" value="0.1346416710443209"/>
-        <Element index="1" value="0.38811693604750286"/>
-        <Element index="2" value="0.9117219227217757"/>
+        <Element index="0" value="0.2426912660502556"/>
+        <Element index="1" value="0.3145802985447364"/>
+        <Element index="2" value="0.9176819629645276"/>
       </Property>
       <Property name="CameraViewUpInfo" id="15014.CameraViewUpInfo" number_of_elements="3">
-        <Element index="0" value="0.1346416710443209"/>
-        <Element index="1" value="0.38811693604750286"/>
-        <Element index="2" value="0.9117219227217757"/>
+        <Element index="0" value="0.2426912660502556"/>
+        <Element index="1" value="0.3145802985447364"/>
+        <Element index="2" value="0.9176819629645276"/>
       </Property>
       <Property name="EyeAngle" id="15014.EyeAngle" number_of_elements="1">
         <Element index="0" value="2"/>
@@ -18202,9 +18239,7 @@
           <Property source_property="TextAnnotationColor" target_id="13471" target_property="PolarAxisLabelColor" unlink_if_modified="1"/>
           <Property source_property="TextAnnotationColor" target_id="13471" target_property="PolarAxisTitleColor" unlink_if_modified="1"/>
           <Property source_property="TextAnnotationColor" target_id="13471" target_property="SecondaryRadialAxesTextColor" unlink_if_modified="1"/>
-          <Property source_property="ForegroundColor" target_id="13659" target_property="AmbientColor" unlink_if_modified="1"/>
           <Property source_property="SurfaceColor" target_id="13659" target_property="BackfaceDiffuseColor" unlink_if_modified="1"/>
-          <Property source_property="SurfaceColor" target_id="13659" target_property="DiffuseColor" unlink_if_modified="1"/>
           <Property source_property="EdgeColor" target_id="13659" target_property="EdgeColor" unlink_if_modified="1"/>
           <Property source_property="InteractiveSelectionColor" target_id="13659" target_property="InteractiveSelectionColor" unlink_if_modified="1"/>
           <Property source_property="SelectionColor" target_id="13659" target_property="SelectionColor" unlink_if_modified="1"/>
