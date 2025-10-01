@@ -41,4 +41,5 @@ Input files:
 
 Post-processing & visualization:
 - The .psvd file in /ParaView stores the pipeline of loading, processing and visualising data (.xdmf and the .h5 files in this case). After finish simulation simply opening this file in your ParaView.
-- The animation of water depth and velocity vector field form t = 0 to 110 s is saved in /ParaView folder as the .mp4 file.
+- The animation of water depth and velocity vector field form t = 0 to 110 s is saved in /ParaView folder as the .mp4 file and looks like below
+![Animation_01_openchannelflow](/01_openchannelflow/ParaView/01_openchannelflow.gif)
