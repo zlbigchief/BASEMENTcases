@@ -28,6 +28,7 @@ To help design and verify the simulation results, a python script ComputeFr.py i
     
     BASEMENT takes this file together with the setup.h5 file generated from **model.json** as input to launch the computation.
 - **results.json**: configuration file that specifies converting the results.h5 file (generated during simulation) into a .xdmf file. Technically it's not right to say 'convert' since the .xdmf file does not really store any data and must always be used with results.h5 placing in the same folder.
+- The .json configuration files were initially populated using the GUI provided. This is convenient to get started but not so much in the later fine tuning and debugging steps when you need come back and forth between some particular parameters and re-run the simulation. In the later case it's better to simply edit the .json file directly and call the BASEMENT executables in a terminal environment.
 
 ## Computation statistics:
 - Unstructured triangular mesh of 8727 cells solved on 16 CPU threads using BASEHPC.
