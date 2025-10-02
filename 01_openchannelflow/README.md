@@ -31,9 +31,9 @@ To help design and verify the simulation results, a python script ComputeFr.py i
 - The .json configuration files were initially populated using the GUI provided. This is convenient to get started but not so much in the later fine tuning and debugging steps when you need come back and forth between some particular parameters and re-run the simulation. In the later case it's better to simply edit the .json file directly and call the BASEMENT executables in a terminal environment.
 
 ## Computation statistics:
-- Unstructured triangular mesh of 8727 cells solved on 16 CPU threads using BASEHPC.
+- Unstructured triangular mesh of 8727 cells solved on 2 and 16 CPU threads using BASEHPC.
 - CPU model: 12th Gen Intel(R) Core(TM) i7-1260P.
-- cpu-time = 256.512s for 110 s physical time.
+- cpu-time = 505.452s (2 threads) and 256.512s (16 threads) for 110 s physical time.
 
 ## Post-processing & visualization:
 - The .psvd file in /ParaView stores the pipeline of loading, processing and visualising data (.xdmf and the .h5 files in this case). After finish simulation simply opening this file in your ParaView.

@@ -21,7 +21,7 @@ Below are introductions of the physical settings, computational stats and quick 
 
 The physical settings for this case include a trapezoidal channel geometry with a bottom width of 20 m, top width of 60 m, and height of 10 m, extending horizontally for 450 m with a bed slope of 0.05 and a Manning friction coefficient of 0.05 s/m<sup>1/3</sup>. The flow parameters feature an incoming discharge of 1558 m<sup>3</sup>/s. 
 
-Computation statistics are based on an unstructured triangular mesh of 8,727 cells, solved using BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), with a total CPU time of 256.512 seconds for 110 seconds of simulated physical time.
+Computation statistics are based on an unstructured triangular mesh of 8,727 cells, solved using BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), with a total CPU time of 256.512 seconds for 110 seconds of simulated physical time. For comparison, the total CPU time is 505.452 seconds when using 2 CPU threads.
 
 The water depth and velocity vector field form t = 0 to 110 s looks like 
 ![Animation_01_openchannelflow](/01_openchannelflow/ParaView/01_openchannelflow.gif)
