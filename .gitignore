@@ -6,3 +6,6 @@
 
 # ignore all .xdmf files
 **/*.xdmf
+
+# ignore all .pptx files
+**/*.pptx
