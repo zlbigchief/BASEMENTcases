@@ -11,7 +11,8 @@ There are a few PDF manuals and documents coming together with the software afte
 - **Reference manual BASEMD**: information about the mathematical models and numerical approximations in BASEMD module
 - **Reference manual BASEHPC**: information about the mathematical models and numerical approximations in BASEHPC module
 - **Tutorials**: Guidance on how to use BASEmesh and how to postprocessing results using QGIS and ParaView; Step-by-step guides on how to set up realistic cases
-- **Testcases**: collection of common benchmark cases for testing hydrodynamic, sediment and vegetation modules; domain coupling and high-performance computation
+- **Testcases**: collection of common benchmark cases for testing hydrodynamic, sediment and vegetation modules; domain coupling and high-performance computation.
+
 Those files can be found from in the /share/doc folder in the installation path.
 
 ## Simulation cases and file structure
