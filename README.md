@@ -5,14 +5,14 @@ This project will be my self-tutorial courses for learning how to use [BASEMENT 
 ## About BASEMENT:
 The software system BASEMENT(BAsic-Simulation-EnvironMENT) is a software developed at VAW of ETH Zurich for simulating river flow, sediment transport and other material transports, harnessing the parallel computation of CPU/GPU hybrid architecture. The software provides a functional environment for numerical simulation of river flows with sediment transport in alpine and sub-alpine regions. The main focus of conception and development is the robustness of the numerical models, the flexibility of the computational grid and the combination and efficiency of the method of calculation (problem dependent equations, coupling of models, parallelization).
 
-There are a few manuals and documents coming together with the software after installation:
+There are a few PDF manuals and documents coming together with the software after installation:
 - **Intro and installation**: how to install BASEMENT for Windows and Linux systems and release notes of latest features and changes in recent versions
 - **User manual**: describing the modelling environment of BASEMENT (particularly the super user-friendly GUI), including the three stages of pre-processing, simulation and postprocessing.
 - **Reference manual BASEMD**: information about the mathematical models and numerical approximations in BASEMD module
 - **Reference manual BASEHPC**: information about the mathematical models and numerical approximations in BASEHPC module
 - **Tutorials**: Guidance on how to use BASEmesh and how to postprocessing results using QGIS and ParaView; Step-by-step guides on how to set up realistic cases
 - **Testcases**: collection of common benchmark cases for testing hydrodynamic, sediment and vegetation modules; domain coupling and high-performance computation
-- Appendix:
+Those files can be found from in the /share/doc folder in the installation path.
 
 ## Simulation cases and file structure
 Below are introductions of the physical settings, computational stats and quick views of the results. For detailed documentations of each case please see the README.md in each case folder.
