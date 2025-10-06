@@ -34,3 +34,9 @@ The computational mesh uses 231 unstructured triangular cells (see below). ![Mes
 
 The simulated water surface and velocity look like:
 ![Animation_02_dambreak](/02_dambreak/ParaView/02_dambreak.gif)
+
+### Case 3: Malpasset dam break
+
+This case reproduces the H_BP_4 case documented in the Testcases.pdf shipped with BASEMENT. This hydraulic test case benefits from the well known real world dataset from the Malpasset dam break in France. The complex geometry, high velocities, often and sudden wet-dry changes and the good documentation allow for a fundamental evaluation of the hydraulic code.
+
+The Malpasset dam was a doubly-curved equal angle arch type with variable radius. It breached on December 2nd, 1959 all of a sudden. The entire wall collapsed nearly completely what makes this event unique. The breach created a water flood wall 40 meters high and moving at 70 km/h. After 20 minutes, the flood reached the village Frejus and still had 3 m depth. The time of the breach and the flood wave can be exactly reconstructed, as the time is known, when the power of different stations switched off.
