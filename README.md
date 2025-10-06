@@ -45,4 +45,12 @@ The Malpasset dam was a doubly-curved equal angle arch type with variable radius
 
 This case tests the bed load transport and morphological modules in BASEHPC. The senario of stationary flow in a widening open channel is simulated. It is expected that as the channel widens and the flow decelerates, the bed load transport decreases downstream and thus the bed elevates due to accretion. 
 
-Specifically, the channel increases from 20 m wide at the upstream inflow boundary to be 40 m wide at the outflow boundary 50 m downstream. ![Schematic_04](/04_bedloadtransport/Physics/Schematic.jpg) The model was initialised with 20 m</sup>3/</sup>/s discharge and a dry bed, which was set to be fixed bed in the first 100 seconds. After that the bed load transport module was activated and accordingly the morphological change was simulated. A uniform bed of grain size 0.02 m, density 3000 kg/m^3 and porosity 0.4 was adopted. The bed load transport was computed using the Meyer-Peter and Müller (1948) model (see MPM model in the reference manuals for details of the mathematical model implemented in the sediment transport module of BASEMENT).
+Specifically, the channel increases from 20 m wide at the upstream inflow boundary to be 40 m wide at the outflow boundary 50 m downstream. ![Schematic_04](/04_bedloadtransport/Physics/Schematic.jpg) The model was initialised with 20 m<sup>3</sup>/s discharge and a dry bed, which was set to be fixed bed in the first 100 seconds. After that the bed load transport module was activated and accordingly the morphological change was simulated. A uniform bed of grain size 0.02 m, density 3000 kg/m<sup>3</sup> and porosity 0.4 was adopted. The bed load transport was computed using the Meyer-Peter and Müller (1948) model (see MPM model in the reference manuals for details of the mathematical model implemented in the sediment transport module of BASEMENT).
+
+The computational mesh uses 231 unstructured triangular cells (see below). ![Meshing_02](/02_dambreak/Physics/meshing.jpg) The simulation is performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), requiring only 0.075 seconds of CPU time for 10 seconds of simulated physical time. 
+
+Shown below are the 3D view of water surface and bed elevation as well as the 2D profile along the channel central line.
+![Animation_04_3D](/04_bedloadtransport/ParaView/04_bedloadtransport_3D.gif)
+![Animation_04_2D](/04_bedloadtransport/ParaView/04_bedloadtransport_2D.gif)
+
+
