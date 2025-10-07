@@ -25,14 +25,18 @@ Computation statistics are based on an unstructured triangular mesh of 8,727 cel
 
 The water depth and velocity vector field form t = 0 to 110 s looks like 
 ![Animation_01](/01_openchannelflow/ParaView/01_openchannelflow.gif)
+![Animation_01](/01_openchannelflow/ParaView/01_openchannelflow.gif)
 
 ### Case 2: Dam break
 
 This case simulates the sudden failure of a dam, resulting in rapid downstream flooding. The domain consists of a flat rectangular channel 15 m long and 1 m wide, with an initial water level of 10 m upstream of the dam and a dry bed downstream. ![Schematic_02](/02_dambreak/Physics/Schematic.jpg) Both the up- and downstream boundaries are treated as vertical walls.
+This case simulates the sudden failure of a dam, resulting in rapid downstream flooding. The domain consists of a flat rectangular channel 15 m long and 1 m wide, with an initial water level of 10 m upstream of the dam and a dry bed downstream. ![Schematic_02](/02_dambreak/Physics/Schematic.jpg) Both the up- and downstream boundaries are treated as vertical walls.
 
+The computational mesh uses 231 unstructured triangular cells (see below). ![Meshing_02](/02_dambreak/Physics/meshing.jpg) The simulation is performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), requiring only 0.075 seconds of CPU time for 10 seconds of simulated physical time. 
 The computational mesh uses 231 unstructured triangular cells (see below). ![Meshing_02](/02_dambreak/Physics/meshing.jpg) The simulation is performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), requiring only 0.075 seconds of CPU time for 10 seconds of simulated physical time. 
 
 The simulated water surface and velocity look like:
+![Animation_02](/02_dambreak/ParaView/02_dambreak.gif)
 ![Animation_02](/02_dambreak/ParaView/02_dambreak.gif)
 
 ### Case 3: Malpasset dam break
