@@ -9,3 +9,6 @@
 
 # ignore all .pptx files
 **/*.pptx
+
+# ignore time-dependent output .sol files
+**/*.sol
