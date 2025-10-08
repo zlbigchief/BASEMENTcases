@@ -1,0 +1,126 @@
+{
+  "SETUP": {
+    "BASEMD": {
+      "BASEPLANE_2D": [
+        {
+          "GEOMETRY": {
+            "file": "H_BP_4.2dm",
+            "type": "2dm"
+          },
+          "HYDRAULICS": {
+            "FRICTION": {
+              "default_friction": 0.033,
+              "friction": [
+                0.033,
+                0.033
+              ],
+              "grain_size_friction": "no",
+              "index": [
+                1,
+                2
+              ],
+              "input_type": "index_table",
+              "type": "manning",
+              "wall_friction": "off"
+            },
+            "INITIAL": {
+              "index": [
+                1,
+                2
+              ],
+              "type": "index_table",
+              "u": [
+                0.0,
+                0.0
+              ],
+              "v": [
+                0.0,
+                0.0
+              ],
+              "wse": [
+                100.0,
+                0.0
+              ]
+            },
+            "PARAMETER": {
+              "dynamic_depth_solver": "on",
+              "dynamic_depth_solver_precision": 0.005,
+              "geo_max_angle_quadrilateral": 45.0,
+              "geo_min_area_ratio": 0.05,
+              "geo_min_aspect_ratio": 0.06,
+              "minimum_water_depth": 0.05,
+              "riemann_solver": "exact",
+              "riemann_tolerance": 1e-06,
+              "simulation_scheme": "exp",
+              "velocity_update_partial": "volume_area"
+            }
+          },
+          "OUTPUT": {
+            "SPECIAL_OUTPUT": [
+              {
+                "format": "vtk",
+                "output_time_step": 10.0,
+                "threshold_wse": -1000000.0,
+                "type": "node_centered",
+                "values": [
+                  {
+                    "accumulator": "none",
+                    "value": "depth"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "wse"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "velocity"
+                  }
+                ]
+              },
+              {
+                "element_ids": [
+                  320
+                ],
+                "element_values": [
+                  {
+                    "accumulator": "none",
+                    "value": "depth"
+                  },
+                  {
+                    "accumulator": "none",
+                    "value": "wse"
+                  }
+                ],
+                "flush_all_num_steps": 0,
+                "history_one_file": "no",
+                "output_time_step": 10.0,
+                "threshold_wse": -1000000.0,
+                "type": "element_history"
+              }
+            ],
+            "console_time_step": 100.0,
+            "restart_time_step": 1e+32
+          },
+          "TIMESTEP": {
+            "CFL": 0.85,
+            "ignore_wave_celerity": "off",
+            "initial_time_step": 0.001,
+            "maximum_time_step": 100.0,
+            "minimum_time_step": 0.001,
+            "morph_cycle": "off",
+            "start_time": -1.0,
+            "total_run_time": 300
+          },
+          "region_name": "H_BP_4"
+        }
+      ],
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81,
+        "rho_fluid": 1000.0,
+        "viscosity": 1.004e-06
+      },
+      "multiregion": "Malpasset"
+    },
+    "simulation_name": "Malpasset"
+  }
+}

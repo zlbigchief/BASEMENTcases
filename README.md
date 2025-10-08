@@ -42,6 +42,11 @@ This case reproduces the H_BP_4 case documented in the Testcases.pdf shipped wit
 
 The Malpasset dam was a doubly-curved equal angle arch type with variable radius. It breached on December 2nd, 1959 all of a sudden. The entire wall collapsed nearly completely what makes this event unique. The breach created a water flood wall 40 meters high and moving at 70 km/h. After 20 minutes, the flood reached the village Frejus and still had 3 m depth. The time of the breach and the flood wave can be exactly reconstructed, as the time is known, when the power of different stations switched off.
 
+The figure below shows the computational grid used for the simulation, which can be downloaded from [here](https://people.ee.ethz.ch/~basement/baseweb/download/testcases/BASEMD/hydr-TC-2D/H-BP-4.zip). ![Meshing_03](/03_malpassetdambreak/Physics/Meshing.jpg) The initial water surface elevation in the storage lake is set to +100.0 m.a.s.l. and in the downstream lake to 0.0 m.a.s.l. The area downstream of the wall is initially dry. At t=0, the dam is removed and we track the flood wave up to 300 seconds. For detailed description please see the README in the /03_malpassetdambreak or section 1.4.4 H_BP_4: Malpasset dam break in the [Testcases](https://people.ee.ethz.ch/~basement/baseweb/download/documentation/BMdoc_Testcases_v4-1-0.pdf) document.
+
+The 22186 cells were solved on 16 CPU threads using BASEMD module. The cpu-time is 21.544 s for 300 s physical time (CPU model: CPU model: 12th Gen Intel(R) Core(TM) i7-1260P).
+![Animation_03](/03_malpassetdambreak/ParaView/03_malpassetdambreak.gif)
+
 ### Case 4: Bed load transport
 
 This case tests the bed load transport and morphological modules in BASEHPC. The senario of stationary flow in a widening open channel is simulated. It is expected that as the channel widens and the flow decelerates, the bed load transport decreases downstream and thus the bed elevates due to accretion. 

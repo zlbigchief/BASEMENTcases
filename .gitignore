@@ -1,14 +1,14 @@
 # ignores all ConsoleLog*.txt files in all subdirectories
 **/ConsoleLog*.txt
 
-# ignore all .h5 files
-**/*.h5
-
 # ignore all .xdmf files
 **/*.xdmf
 
 # ignore all .pptx files
 **/*.pptx
 
-# ignore time-dependent output .sol files
+# ignore output files
 **/*.sol
+**/*.vtk
+**/*.dat
+**/*.h5
