@@ -10,5 +10,6 @@
 # ignore all .pptx files
 **/*.pptx
 
-# ignore time-dependent output .sol files
+# ignore output files
 **/*.sol
+**/*.vtk
