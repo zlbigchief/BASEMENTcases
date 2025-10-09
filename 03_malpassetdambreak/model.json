@@ -58,7 +58,7 @@
           "OUTPUT": {
             "SPECIAL_OUTPUT": [
               {
-                "format": "vtk",
+                "format": "shape",
                 "output_time_step": 10.0,
                 "threshold_wse": -1000000.0,
                 "type": "node_centered",
