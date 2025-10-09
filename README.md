@@ -45,7 +45,21 @@ The Malpasset dam was a doubly-curved equal angle arch type with variable radius
 The figure below shows the computational grid used for the simulation, which can be downloaded from [here](https://people.ee.ethz.ch/~basement/baseweb/download/testcases/BASEMD/hydr-TC-2D/H-BP-4.zip). ![Meshing_03](/03_malpassetdambreak/Physics/Meshing.jpg) The initial water surface elevation in the storage lake is set to +100.0 m.a.s.l. and in the downstream lake to 0.0 m.a.s.l. The area downstream of the wall is initially dry. At t=0, the dam is removed and we track the flood wave up to 300 seconds. For detailed description please see the README in the /03_malpassetdambreak or section 1.4.4 H_BP_4: Malpasset dam break in the [Testcases](https://people.ee.ethz.ch/~basement/baseweb/download/documentation/BMdoc_Testcases_v4-1-0.pdf) document.
 
 The 22186 cells were solved on 16 CPU threads using BASEMD module. The cpu-time is 21.544 s for 300 s physical time (CPU model: CPU model: 12th Gen Intel(R) Core(TM) i7-1260P).
+The following aniamtion was generateed using ParaView to open the .vtk format outputs, this can be done by setting the format to be 'vtk' in the SPECIAL_OUTPUT block in model.json file
 ![Animation_03](/03_malpassetdambreak/ParaView/03_malpassetdambreak.gif)
+
+```
+"OUTPUT": {
+  "SPECIAL_OUTPUT": [
+    {
+      "format": "vtk",
+      ...
+    }
+  ]
+}
+```
+ 
+Alternatively, animation in QGIS by changing the format to shape is also possible but needs a bit more post-processing by the user (see this [README](/03_malpassetdambreak/README.md) for details.)
 
 ### Case 4: Bed load transport
 
