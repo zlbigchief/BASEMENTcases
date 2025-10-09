@@ -60,7 +60,7 @@
         ```
   5. Enable temporal control
      - *Layer Properties → Temporal* → check **Dynamic Temporal Control**.
-     - Configuration: Single Field with Date/Time* → Field: `datetime`
+     - Configuration: *Single Field with Date/Time* → Field: `datetime`
      - Set **Event duration** to your timestep (e.g. 10 s).
 
   6. Style the layer: *Layer Styling* → **Graduated** → Value: `depth` → choose color ramp → *Classify*.
