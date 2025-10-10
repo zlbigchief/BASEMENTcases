@@ -1,0 +1,132 @@
+{
+  "SETUP": {
+    "BASEHPC": {
+      "BASEPLANE_2D": {
+        "GEOMETRY": {
+          "mesh_file": "D:/BASEMENTcases/04_bedloadtransport/widening_open_channel.2dm",
+          "STRINGDEF": [
+            {
+              "name": "Inflow",
+              "upstream_direction": "left"
+            },
+            {
+              "name": "Outflow",
+              "upstream_direction": "left"
+            }
+          ]
+        },
+        "HYDRAULICS": {
+          "INITIAL": {
+            "type": "dry"
+          },
+          "PARAMETER": {
+            "CFL": 0.9,
+            "fluid_density": 1000,
+            "max_time_step": 100,
+            "minimum_water_depth": 0.01
+          },
+          "BOUNDARY": {
+            "STANDARD": [
+              {
+                "name": "Inflow",
+                "string_name": "Inflow",
+                "type": "uniform_in",
+                "discharge": 20.0,
+                "slope": 0.05
+              },
+              {
+                "name": "Outflow",
+                "string_name": "Outflow",
+                "type": "uniform_out",
+                "slope": 0.01
+              }
+            ]
+          },
+          "FRICTION": {
+            "default_friction": 0.035,
+            "type": "manning"
+          }
+        },
+        "MORPHOLOGY": {
+          "BEDLOAD": {
+            "FORMULA": {
+              "factor": 0.0,
+              "type": "MPM"
+            }
+          },
+          "SUSLOAD": {
+            "INITIAL": {
+              "type": "zero"
+            },
+            "PARAMETER": {
+              "suspended_relax_par": 0.1,
+              "suspended_beta_factor": 1
+            },
+            "BOUNDARY": {
+              "STANDARD": [
+                {
+                  "name": "out",
+                  "string_name": "Outflow",
+                  "type": "zero_gradient_out"
+                }
+              ]
+            },
+            "EROSION_RATE": {
+              "closure_model": "van_rijn",
+              "constants": {
+                "critical_shields": 0.02
+              }
+            },
+            "DEPOSITION_RATE": {
+              "closure_model": "lin",
+              "constants": {
+                "param_m": 0.8
+              }
+            }
+          },
+          "BEDMATERIAL": {
+            "GRAIN_CLASS": {
+              "diameters": [
+                0.005
+              ]
+            },
+            "MIXTURE": [
+              {
+                "name": "no mixture",
+                "volume_fraction": [
+                  100.0
+                ]
+              }
+            ],
+            "SOIL_ASSIGNMENT": {
+              "default_soil": "fixed bed"
+            },
+            "SOILDEF": [
+              {
+                "LAYER": [
+                  {
+                    "mixture_name": "no mixture",
+                    "z_rel": -999.0
+                  }
+                ],
+                "name": "fixed bed"
+              }
+            ]
+          },
+          "INITIAL": {
+            "type": "mesh"
+          },
+          "PARAMETER": {
+            "morphodynamic_start": 100.0,
+            "sediment_density": 2650.0,
+            "sediment_porosity": 0.4
+          }
+        }
+      },
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81
+      }
+    },
+    "simulation_name": "05_suspendedsedimenttransport"
+  }
+}
