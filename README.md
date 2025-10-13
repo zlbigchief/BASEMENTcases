@@ -70,3 +70,13 @@ Specifically, the channel increases from 20 m wide at the upstream inflow bounda
 The computational mesh uses 2380 unstructured triangular cells ![Meshing_04](/04_bedloadtransport/Physics/Meshing.jpg) The simulation is performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), requiring 3.13 seconds of CPU time for 500 seconds of simulated physical time. 
 
 Shown below are the 3D view of water surface and bed elevation ![Animation_04_3D](/04_bedloadtransport/ParaView/04_bedloadtransport_3Dview.gif) as well as the 2D profile along the channel central line. ![Animation_04_2D](/04_bedloadtransport/ParaView/04_bedloadtransport_2Dview.gif)
+
+### Case 5: Suspended sediment transport
+
+This case demonstrates suspended sediment transport and morphological change in a widening open channel using BASEHPC. The computational domain and mesh are the same as in Case 4, but the focus is on sediment picked up by water flow rather than bed load transport.
+
+Sediment properties include a grain size of 0.005 m (5 mm), sediment density of 2650 kg/m³, porosity of 0.4, and a critical Shields parameter of 0.02. The bedload transport module is formally included but its pre-factor is set to zero, so morphological change is solely induced by suspended sediment erosion.
+
+The computational mesh consists of 2380 unstructured triangular cells (same as Case 4), solved on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P) with a cpu-time of 3.13 seconds for 400 seconds of physical time simulation.
+
+Post-processing and visualization are performed in ParaView using the .psvd file in /ParaView. Visualizations include water surface elevation, suspended sediment concentration, and bed elevation changes. ![Animation_05](/05_suspendedsedimenttransport/ParaView/05_suspendedsedimenttransport.gif)
