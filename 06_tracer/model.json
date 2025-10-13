@@ -1,0 +1,73 @@
+{
+  "SETUP": {
+    "simulation_name": "06_tracer",
+    "BASEHPC": {
+      "BASEPLANE_2D": {
+        "GEOMETRY": {
+          "mesh_file": "D:/BASEMENTcases/06_tracer/trapezoidal_channel_mesh.2dm",
+          "STRINGDEF": [
+            {
+              "name": "left",
+              "upstream_direction": "right"
+            },
+            {
+              "name": "right",
+              "upstream_direction": "right"
+            }
+          ],
+          "REGIONDEF": [
+            {
+              "index": [
+                1
+              ],
+              "name": "reg0"
+            }
+          ]
+        },
+        "HYDRAULICS": {
+          "INITIAL": {
+            "type": "region_defined",
+            "regions": [
+              {
+                "region_name": "reg0",
+                "u": -0.2,
+                "v": 0,
+                "h": 5.0
+              }
+            ]
+          },
+          "PARAMETER": {
+            "CFL": 0.9,
+            "fluid_density": 1000,
+            "max_time_step": 100,
+            "minimum_water_depth": 0.01
+          },
+          "BOUNDARY": {
+            "STANDARD": [
+              {
+                "name": "Left",
+                "type": "uniform_out",
+                "string_name": "left",
+                "slope": 0.05
+              },
+              {
+                "name": "Right",
+                "string_name": "right",
+                "type": "uniform_in",
+                "slope": 0.05,
+                "discharge": 1558.0
+              }
+            ]
+          },
+          "FRICTION": {
+            "default_friction": 0.05,
+            "type": "manning"
+          }
+        }
+      },
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81
+      }
+    }
+  }
+}
