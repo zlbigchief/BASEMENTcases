@@ -78,13 +78,22 @@
             "num_tracers": 1,
             "tracers_start": 0
           },
+          "BOUNDARY": {
+            "STANDARD": [
+              {
+                "name": "out",
+                "string_name": "left",
+                "type": "zero_gradient_out"
+              }
+            ]
+          },
           "SOURCE": [
             {
               "name": "point1",
               "region_name": "point1",
+              "sink": "available",
               "type": "total",
-              "sink": "infinity",
-              "data1": 100.0
+              "data1": 500.0
             }
           ]
         }
