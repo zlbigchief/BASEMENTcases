@@ -2,7 +2,9 @@
   "SIMULATION": {
     "OUTPUT": [
       "flow_velocity",
-      "water_surface"
+      "water_surface",
+      "tracer1",
+      "tracer1_drv"
     ],
     "TIME": {
       "end": 110.0,

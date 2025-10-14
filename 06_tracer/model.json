@@ -21,6 +21,12 @@
                 1
               ],
               "name": "reg0"
+            },
+            {
+              "index": [
+                2
+              ],
+              "name": "point1"
             }
           ]
         },
@@ -63,6 +69,24 @@
             "default_friction": 0.05,
             "type": "manning"
           }
+        },
+        "TRACERS": {
+          "INITIAL": {
+            "type": "zero"
+          },
+          "PARAMETER": {
+            "num_tracers": 1,
+            "tracers_start": 0
+          },
+          "SOURCE": [
+            {
+              "name": "point1",
+              "region_name": "point1",
+              "type": "total",
+              "sink": "infinity",
+              "data1": 100.0
+            }
+          ]
         }
       },
       "PHYSICAL_PROPERTIES": {
