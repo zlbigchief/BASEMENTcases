@@ -80,3 +80,15 @@ Sediment properties include a grain size of 0.005 m (5 mm), sediment density of 
 The computational mesh consists of 2380 unstructured triangular cells (same as Case 4), solved on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P) with a cpu-time of 3.13 seconds for 400 seconds of physical time simulation.
 
 Post-processing and visualization are performed in ParaView using the .psvd file in /ParaView. Visualizations include water surface elevation, suspended sediment concentration, and bed elevation changes. ![Animation_05](/05_suspendedsedimenttransport/ParaView/05_suspendedsedimenttransport.gif)
+
+### Case 6: Passive tracer transport
+
+This scenario reuses the trapezoidal channel of [Case 1](#case-1-open-channel-flow) but activates BASEHPC's tracer module to release a passive dye pulse into the 1,558 m<sup>3</sup>/s steady inflow. A single point source inside the mesh emits the tracer mass while a zero-gradient outlet lets it flush out of the domain.
+
+The simulation runs for 110 s on the 8,727-cell mesh, saving velocity, water surface, tracer concentration, and its time derivative every 5 s. ParaView assets in `/06_tracer/ParaView` reproduce the plume evolution. ![Animation_06](/06_tracer/ParaView/06_tracer.gif)
+
+### Case 7: Vegetation-bedload interaction
+
+Case 7 extends the widening channel of [Case 4](#case-4-bed-load-transport) by enabling BASEMENT's vegetation feedbacks. Uniform discharge of 20 m<sup>3</sup>/s enters a 50 m reach where initial biomass alters hydraulic roughness and critical Shields stress before morphodynamics activate after 100 s.
+
+Outputs include water depth, bed change, velocity, and above-ground biomass every 2 s over 500 s of simulated time, allowing comparison between vegetated and bare-bed responses. ParaView visualisations in `/07_vegetation/ParaView` combine morphology and vegetation layers. ![Animation_07](/07_vegetation/ParaView/07_vegetation.gif)
