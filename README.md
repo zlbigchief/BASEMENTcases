@@ -20,6 +20,8 @@ Below are introductions of the physical settings, computational stats and quick 
 
 ### Case 1: Open channel flow
 
+[More details in the case README](./01_openchannelflow/README.md)
+
 The physical settings for this case include a trapezoidal channel geometry with a bottom width of 20 m, top width of 60 m, and height of 10 m, extending horizontally for 450 m with a bed slope of 0.05 and a Manning friction coefficient of 0.05 s/m<sup>1/3</sup>. The flow parameters feature an incoming discharge of 1558 m<sup>3</sup>/s. 
 
 Computation statistics are based on an unstructured triangular mesh of 8,727 cells, solved using BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), with a total CPU time of 256.512 seconds for 110 seconds of simulated physical time. For comparison, the total CPU time is 505.452 seconds when using 2 CPU threads.
@@ -29,6 +31,8 @@ The water depth and velocity vector field form t = 0 to 110 s looks like
 
 ### Case 2: Dam break
 
+[More details in the case README](./02_dambreak/README.md)
+
 This case simulates the sudden failure of a dam, resulting in rapid downstream flooding. The domain consists of a flat rectangular channel 15 m long and 1 m wide, with an initial water level of 10 m upstream of the dam and a dry bed downstream. ![Schematic_02](/02_dambreak/Physics/Schematic.jpg) Both the up- and downstream boundaries are treated as vertical walls.
 
 The computational mesh uses 231 unstructured triangular cells (see below). ![Meshing_02](/02_dambreak/Physics/meshing.jpg) The simulation is performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P), requiring only 0.075 seconds of CPU time for 10 seconds of simulated physical time. 
@@ -37,6 +41,8 @@ The simulated water surface and velocity look like:
 ![Animation_02](/02_dambreak/ParaView/02_dambreak.gif)
 
 ### Case 3: Malpasset dam break
+
+[More details in the case README](./03_malpassetdambreak/README.md)
 
 This case reproduces the H_BP_4 case documented in the Testcases.pdf shipped with BASEMENT. This hydraulic test case benefits from the well known real world dataset from the Malpasset dam break in France. The complex geometry, high velocities, often and sudden wet-dry changes and the good documentation allow for a fundamental evaluation of the hydraulic code.
 
@@ -63,6 +69,8 @@ Alternatively, animation in QGIS by changing the format to shape is also possibl
 
 ### Case 4: Bed load transport
 
+[More details in the case README](./04_bedloadtransport/README.md)
+
 This case tests the bed load transport and morphological modules in BASEHPC. The senario of stationary flow in a widening open channel is simulated. It is expected that as the channel widens and the flow decelerates, the bed load transport decreases downstream and thus the bed elevates due to accretion. 
 
 Specifically, the channel increases from 20 m wide at the upstream inflow boundary to be 40 m wide at the outflow boundary 50 m downstream. ![Schematic_04](/04_bedloadtransport/Physics/Schematic.jpg) The model was initialised with 20 m<sup>3</sup>/s discharge and a dry bed, which was set to be fixed bed in the first 100 seconds. After that the bed load transport module was activated and accordingly the morphological change was simulated. A uniform bed of grain size 0.02 m, density 3000 kg/m<sup>3</sup> and porosity 0.4 was adopted. The bed load transport was computed using the Meyer-Peter and Müller (1948) model (see MPM model in the reference manuals for details of the mathematical model implemented in the sediment transport module of BASEMENT).
@@ -72,6 +80,8 @@ The computational mesh uses 2380 unstructured triangular cells ![Meshing_04](/04
 Shown below are the 3D view of water surface and bed elevation ![Animation_04_3D](/04_bedloadtransport/ParaView/04_bedloadtransport_3Dview.gif) as well as the 2D profile along the channel central line. ![Animation_04_2D](/04_bedloadtransport/ParaView/04_bedloadtransport_2Dview.gif)
 
 ### Case 5: Suspended sediment transport
+
+[More details in the case README](./05_suspendedsedimenttransport/README.md)
 
 This case demonstrates suspended sediment transport and morphological change in a widening open channel using BASEHPC. The computational domain and mesh are the same as in Case 4, but the focus is on sediment picked up by water flow rather than bed load transport.
 
@@ -83,11 +93,15 @@ Post-processing and visualization are performed in ParaView using the .psvd file
 
 ### Case 6: Passive tracer transport
 
+[More details in the case README](./06_tracer/README.md)
+
 This scenario reuses the trapezoidal channel of [Case 1](#case-1-open-channel-flow) but activates BASEHPC's tracer module to release a passive dye pulse into the 1,558 m<sup>3</sup>/s steady inflow. A single point source inside the mesh emits the tracer mass while a zero-gradient outlet lets it flush out of the domain.
 
 The simulation runs for 110 s on the 8,727-cell mesh, saving velocity, water surface, tracer concentration, and its time derivative every 5 s. ParaView assets in `/06_tracer/ParaView` reproduce the plume evolution. ![Animation_06](/06_tracer/ParaView/06_tracer.gif)
 
 ### Case 7: Vegetation-bedload interaction
+
+[More details in the case README](./07_vegetation/README.md)
 
 Case 7 extends the widening channel of [Case 4](#case-4-bed-load-transport) by enabling BASEMENT's vegetation feedbacks. Uniform discharge of 20 m<sup>3</sup>/s enters a 50 m reach where initial biomass alters hydraulic roughness and critical Shields stress before morphodynamics activate after 100 s.
 
