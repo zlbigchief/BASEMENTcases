@@ -1,35 +1,28 @@
-# Case 4: Bed load transport
+# Case 7: Vegetation-bedload interaction in a widening channel
 
 ## Physical settings
-- Channel geometry:
-    - Widening open channel, 50 m long, 0.01 bed slope
-    - Upstream width: 20 m; downstream width: 40 m
-    - Initial bed: dry, fixed for first 100 s, then mobile
-    - Uniform bed material: grain size 0.02 m, density 3000 kg/m³, porosity 0.4
-    - Schematic diagram: ![Schematic_04](/04_bedloadtransport/Physics/Schematic.jpg)
-- Flow scenario:
-    - Stationary flow with 20 m³/s discharge
-    - Morphological change simulated after 100 s
+- Geometry matches Case 4: a 50 m long channel that widens linearly from 20 m to 40 m with a bed slope of 0.01. The regenerated mesh (`widening_open_channel.2dm`) comprises 1,249 nodes and 2,380 triangular cells.
+- Upstream discharge remains 20 m<sup>3</sup>/s. The domain starts dry, fills from the inflow boundary, and activates morphodynamics after 100 s.
+- Bed material is a uniform gravel mixture with grain size 0.02 m, density 3,000 kg/m<sup>3</sup>, and porosity 0.4, identical to the reference case.
+
+## Vegetation configuration
+- A single vegetation region (`reg0`) covers the plane with initial non-dimensional above-ground biomass 0.3, below-ground biomass 0.5, and rooting depth 0.5 m.
+- Vegetation parameters use BASEMENT's empirical closure: plant height scales with biomass (`plant_height_fact = 0.5`, `plant_height_exp = 0.2`), drag is amplified by `veg_strickler_fact = 0.1`, and the critical Shields stress for uprooting is scaled with `veg_theta_critical_fact = 0.9`. The parameters chosen **do not** necessarily reflect any real cases but were simply for demo purpose.
+- Vegetation feedback is active from t = 0 s, so roughness, critical shear stress, and bedload thresholds respond to biomass changes once morphodynamics commence.
 
 ## Numerical settings
-- Computational mesh: 231 unstructured triangular cells. Visualization: ![Meshing_04](/04_bedloadtransport/Physics/meshing.jpg)
-- Simulation performed with BASEHPC on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P)
-- Simulation time: 500 s physical time
+- Morphodynamics: Meyer-Peter and Mueller (1948) bedload transport formula, morphodynamic start at 100 s, sediment density 3,000 kg/m<sup>3</sup>, porosity 0.4.
+- Simulation window: 0-500 s with 2 s write interval. Exported fields extend Case 4 by adding `aboveground_biomass` so vegetation evolution can be visualised alongside hydraulics and bed change.
+- Solver: BASEMENT v4.1.0, BASEHPC OpenMP build. The fastest 16-thread run completed in roughly 3.3-3.7 s CPU time for the 500 s simulation.
 
-## Input files:
-- **model.json**: configuration file specifying physical problem and numerical settings, including the computational mesh (.2dm file). BASEMENT writes its info into a setup.h5 file, which is used for simulation.
-- **widening_open_channel.2dm**: unstructured triangular mesh file required by BASEHPC as computational domain. For .2dm file format, see [SMS wiki](https://www.xmswiki.com/wiki/SMS:2D_Mesh_Files_*.2dm?__cf_chl_tk=r_woYILHa12UMY664uxq5gFDzTZfQia_Lz7.6bShzj8-1759226996-1.0.1.1-1aZOLNVb_EeD1zsV.on53xi.Jr71gmBhP2pD1xdBYy0). This file was generated using the script **widening_open_channel.py** adapted from the usage_example.py at [BASEmesh repo](https://gitlab.ethz.ch/vaw/public/basemesh-v2/-/tree/master/examples/meshtool?ref_type=heads). 
+## Input files
+- `model.json` - Case 4 setup augmented with the `VEGETATION` block defining biomass fields, Strickler factor scaling, and critical shear adjustments.
+- `widening_open_channel.2dm` - mesh generated via `widening_open_channel.py`, retaining the inflow/outflow string definitions consumed by hydraulics, morphology, and vegetation.
+- `simulation.json` - solver control and output configuration, now including the biomass field.
+- `results.json` - post-processing recipe that builds `results.xdmf` from `results.h5` for ParaView.
+- `ParaView/07_vegetation.pvsm` - ParaView state used to generate `ParaView/07_vegetation.gif`, combining water surface, bed elevation change, velocity vectors, and the vegetation layer.
 
-- **simulation.json**: configuration file specifying numerical settings, variables to store, and time intervals for storing. Used with setup.h5 to launch computation.
-- **results.json**: configuration file for converting results.h5 to .xdmf for visualization. The .xdmf file references results.h5 and does not store data itself.
-- The .json files can be edited directly for fine-tuning and rerunning simulations.
-
-## Computation statistics:
-- Unstructured triangular mesh of 2380 cells solved on 16 CPU threads using BASEHPC.
-- CPU model: 12th Gen Intel(R) Core(TM) i7-1260P.
-- cpu-time = 3.13 s for 500 s physical time.
-
-## Post-processing & visualization:
-- The .psvd file in /ParaView stores the pipeline for loading, processing, and visualizing data (.xdmf and .h5 files). Open this file in ParaView after simulation.
-- Animation of water surface and bed elevation (3D view): ![Animation_04_3D](/04_bedloadtransport/ParaView/04_bedloadtransport_3Dview.gif)
-- Animation of water surface and bed elevation (2D profile along channel central line): ![Animation_04_2D](/04_bedloadtransport/ParaView/04_bedloadtransport_2Dview.gif)
+## Post-processing & visualization
+- The ParaView state in `/07_vegetation/ParaView/07_vegetation.pvsm` restores the full pipeline (loading `results.xdmf`, applying contours/slices, and styling).
+- An animation of water surface, bed elevation change, and vegetation cover is exported as `/07_vegetation/ParaView/07_vegetation.gif`.
+![Animation_07](/07_vegetation/ParaView/07_vegetation.gif)
