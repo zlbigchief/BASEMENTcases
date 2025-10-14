@@ -1,0 +1,129 @@
+{
+  "SETUP": {
+    "BASEHPC": {
+      "BASEPLANE_2D": {
+        "GEOMETRY": {
+          "mesh_file": "D:/BASEMENTcases/07_vegetation/widening_open_channel.2dm",
+          "STRINGDEF": [
+            {
+              "name": "Inflow",
+              "upstream_direction": "left"
+            },
+            {
+              "name": "Outflow",
+              "upstream_direction": "left"
+            }
+          ],
+          "REGIONDEF": [
+            {
+              "index": [
+                1
+              ],
+              "name": "reg0"
+            }
+          ]
+        },
+        "HYDRAULICS": {
+          "INITIAL": {
+            "type": "dry"
+          },
+          "PARAMETER": {
+            "CFL": 0.9,
+            "fluid_density": 1000,
+            "max_time_step": 100,
+            "minimum_water_depth": 0.01
+          },
+          "BOUNDARY": {
+            "STANDARD": [
+              {
+                "name": "Inflow",
+                "string_name": "Inflow",
+                "type": "uniform_in",
+                "discharge": 20.0,
+                "slope": 0.05
+              },
+              {
+                "name": "Outflow",
+                "string_name": "Outflow",
+                "type": "uniform_out",
+                "slope": 0.01
+              }
+            ]
+          },
+          "FRICTION": {
+            "default_friction": 0.035,
+            "type": "manning"
+          }
+        },
+        "MORPHOLOGY": {
+          "BEDLOAD": {
+            "FORMULA": {
+              "factor": 1,
+              "type": "MPM"
+            }
+          },
+          "BEDMATERIAL": {
+            "GRAIN_CLASS": {
+              "diameters": [
+                0.02
+              ]
+            },
+            "MIXTURE": [
+              {
+                "name": "uniform",
+                "volume_fraction": [
+                  100.0
+                ]
+              }
+            ],
+            "SOIL_ASSIGNMENT": {
+              "default_soil": "Soil1"
+            },
+            "SOILDEF": [
+              {
+                "LAYER": [
+                  {
+                    "mixture_name": "uniform",
+                    "z_rel": -999.0
+                  }
+                ],
+                "name": "Soil1"
+              }
+            ]
+          },
+          "INITIAL": {
+            "type": "mesh"
+          },
+          "PARAMETER": {
+            "morphodynamic_start": 100.0,
+            "sediment_density": 3000.0,
+            "sediment_porosity": 0.4
+          }
+        },
+        "VEGETATION": {
+          "INITIAL": {
+            "type": "region_defined",
+            "regions": [
+              {
+                "aboveground_biomass": 0.3,
+                "belowground_biomass": 0.5,
+                "region_name": "reg0",
+                "rooting_depth": 0.5
+              }
+            ]
+          },
+          "PARAMETER": {
+            "plant_height_exp": 0.2,
+            "plant_height_fact": 0.5,
+            "veg_strickler_fact": 0.1,
+            "veg_theta_critical_fact": 0.9
+          }
+        }
+      },
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81
+      }
+    },
+    "simulation_name": "07_vegetation"
+  }
+}
