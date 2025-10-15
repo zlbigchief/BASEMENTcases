@@ -1,0 +1,46 @@
+{
+  "SETUP": {
+    "BASEHPC": {
+      "BASEPLANE_2D": {
+        "GEOMETRY": {
+          "mesh_file": "D:/BASEMENTcases/09_restartsimulation/two_region_basin.2dm",
+          "REGIONDEF": [
+            {
+              "index": [
+                0
+              ],
+              "name": "Wet"
+            },
+            {
+              "index": [
+                1
+              ],
+              "name": "Dry"
+            }
+          ]
+        },
+        "HYDRAULICS": {
+          "INITIAL": {
+            "type": "continue",
+            "file": "D:/BASEMENTcases/09_restartsimulation/results_old.h5",
+            "time": 10.0
+          },
+          "PARAMETER": {
+            "CFL": 0.9,
+            "fluid_density": 1000,
+            "max_time_step": 100,
+            "minimum_water_depth": 0.01
+          },
+          "FRICTION": {
+            "default_friction": 0.6,
+            "type": "manning"
+          }
+        }
+      },
+      "PHYSICAL_PROPERTIES": {
+        "gravity": 9.81
+      }
+    },
+    "simulation_name": "09_restartsimulation"
+  }
+}
