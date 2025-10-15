@@ -12,3 +12,7 @@
 **/*.dbf
 **/*.gpkg*
 **/*.shx
+
+# Ignore all .DS_Store files (macOS specific)
+.DS_Store
+**/.DS_Store
