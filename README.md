@@ -106,3 +106,22 @@ The simulation runs for 110 s on the 8,727-cell mesh, saving velocity, water sur
 Case 7 extends the widening channel of [Case 4](#case-4-bed-load-transport) by enabling BASEMENT's vegetation feedbacks. Uniform discharge of 20 m<sup>3</sup>/s enters a 50 m reach where initial biomass alters hydraulic roughness and critical Shields stress before morphodynamics activate after 100 s.
 
 Outputs include water depth, bed change, velocity, and above-ground biomass every 2 s over 500 s of simulated time, allowing comparison between vegetated and bare-bed responses. ParaView visualisations in `/07_vegetation/ParaView` combine morphology and vegetation layers. ![Animation_07](/07_vegetation/ParaView/07_vegetation.gif)
+
+### Case 8: Sunlit heating in a still-water pool
+
+[More details in the case README](./08_temperature/README.md)
+
+This case demonstrates the temperature module in a quiescent pool exposed to sunlight. The domain is a short trapezoidal channel with a central widening forming a pool region where a meteorological heat source (air 20 °C, RH 80%, wind 5 m/s, no shade, 400 W/m² radiation) acts only over the pool. Temperature diffuses with constant longitudinal/transverse coefficients of 0.2 m²/s. The run covers 0–3600 s with 20 s output interval on an unstructured triangular mesh of 3,374 cells and 1,761 nodes.
+
+Mesh preview and animation:
+![Meshing_08](/08_temperature/QGIS/Meshing.jpg)
+![Animation_08](/08_temperature/ParaView/08_temperature.gif)
+
+### Case 9: Restart simulation from Case 2
+
+[More details in the case README](./09_restartsimulation/README.md)
+
+This case showcases BASEMENT's restart capability by continuing the dambreak simulation of Case 2 from a saved state at t = 10 s (`results_old.h5`). It uses the same two-region rectangular channel mesh as Case 2 (231 triangles, 154 nodes) and advances for an additional 50 s with outputs every 0.2 s.
+
+Animation of the continued run:
+![Animation_09](/09_restartsimulation/ParaView/09_restartsimulation.gif)
