@@ -24,7 +24,7 @@
 ## Computation statistics:
 - Solver: BASEMENT (BASEHPC OpenMP build) on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P).
 - Unstructured triangular mesh: 231 cells, 154 nodes.
-- cpu-time = ____ s for the 50 s continuation.
+- cpu-time = 2.52 s for the 50 s continuation.
 
 ## Post-processing & visualization:
 - Load `results.xdmf` in ParaView and apply the saved state `09_restartsimulation/ParaView/09_restartsimulation.pvsm` to reproduce the visualisation.

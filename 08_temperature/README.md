@@ -26,7 +26,7 @@
 ## Computation statistics:
 - Solver: BASEMENT (BASEHPC OpenMP build) on 16 CPU threads (12th Gen Intel(R) Core(TM) i7-1260P).
 - Unstructured triangular mesh: 3,374 cells, 1,761 nodes.
-- cpu-time = ____ s for 3600 s physical time.
+- cpu-time = ~1 min for 3600 s physical time.
 
 ## Post-processing & visualization:
 - Load `results.xdmf` in ParaView and apply the saved state `08_temperature/ParaView/08_temperature.pvsm` to reproduce the views.
