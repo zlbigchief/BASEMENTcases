@@ -5,7 +5,7 @@ This project will be my self-tutorial courses for learning how to use [BASEMENT 
 ## About BASEMENT:
 The software system BASEMENT(BAsic-Simulation-EnvironMENT) is a software developed at VAW of ETH Zurich for simulating river flow, sediment transport and other material transports, harnessing the parallel computation of CPU/GPU hybrid architecture. The software provides a functional environment for numerical simulation of river flows with sediment transport in alpine and sub-alpine regions. The main focus of conception and development is the robustness of the numerical models, the flexibility of the computational grid and the combination and efficiency of the method of calculation (problem dependent equations, coupling of models, parallelization).
 
-There are a few PDF manuals and documents coming together with the software after installation:
+You can find the [PDF manuals and documents](https://basement.ethz.ch/download/software-download/docu4.html) from the website hosted at ETH Zürich and they also come together with the software after installation:
 - **Intro and installation**: how to install BASEMENT for Windows and Linux systems and release notes of latest features and changes in recent versions
 - **User manual**: describing the modelling environment of BASEMENT (particularly the super user-friendly GUI), including the three stages of pre-processing, simulation and postprocessing.
 - **Reference manual BASEMD**: information about the mathematical models and numerical approximations in BASEMD module
