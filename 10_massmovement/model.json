@@ -1,20 +1,20 @@
 {
     "SETUP":{
-        "simulation_name":"18_A_run",
+        "simulation_name":"10_massmovement",
         "BASEHPC": {
             "PHYSICAL_PROPERTIES": {
                 "gravity": 9.81
             },
             "BASEPLANE_2D": {
                 "GEOMETRY": {
-                    "mesh_file": "../../meshes/mass_movement_square.2dm",
+                    "mesh_file": "massmovement.2dm",
                     "REGIONDEF": [
                         {
-                            "name": "one",
-                            "index": [1] },
+                            "name": "fixed",
+                            "index": [0] },
                         {
-                            "name": "two",
-                            "index": [2] }
+                            "name": "movable",
+                            "index": [1] }
                     ]
                 },
                 "HYDRAULICS": {
@@ -27,21 +27,21 @@
                     "INITIAL":{
                         "type": "region_defined",
                         "regions": [
-                            {"region_name": "one",
+                            {"region_name": "fixed",
                              "u": 0.0,
                              "v": 0.0,
-                             "h": 0.0},
-                            {"region_name": "two",
+                             "h": 10.0},
+                            {"region_name": "movable",
                              "u": 0.0,
                              "v": 0.0,
-                             "h": 0.0}
+                             "h": 10.0}
                         ]
                     }
                 },
                 "MASSMOVEMENT": {
                     "regions": [
-                        {"region_name": "two",
-                         "thickness": 5.0
+                        {"region_name": "movable",
+                         "thickness": 1
                         }
                     ]
                 }

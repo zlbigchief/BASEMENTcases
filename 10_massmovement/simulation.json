@@ -2,8 +2,8 @@
     "SIMULATION":{
         "TIME": {
             "start": 0.0,
-            "end": 2.0,
-            "out": 1.0
+            "end": 540.0,
+            "out": 5.0
         },
         "OUTPUT": [
             "bottom_elevation",
