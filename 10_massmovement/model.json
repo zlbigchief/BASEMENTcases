@@ -1,0 +1,51 @@
+{
+    "SETUP":{
+        "simulation_name":"18_A_run",
+        "BASEHPC": {
+            "PHYSICAL_PROPERTIES": {
+                "gravity": 9.81
+            },
+            "BASEPLANE_2D": {
+                "GEOMETRY": {
+                    "mesh_file": "../../meshes/mass_movement_square.2dm",
+                    "REGIONDEF": [
+                        {
+                            "name": "one",
+                            "index": [1] },
+                        {
+                            "name": "two",
+                            "index": [2] }
+                    ]
+                },
+                "HYDRAULICS": {
+                    "PARAMETER": {
+                        "CFL": 0.9,
+                        "minimum_water_depth":0.01,
+                        "fluid_density": 1000.0,
+                        "max_time_step": 100.0
+                    },
+                    "INITIAL":{
+                        "type": "region_defined",
+                        "regions": [
+                            {"region_name": "one",
+                             "u": 0.0,
+                             "v": 0.0,
+                             "h": 0.0},
+                            {"region_name": "two",
+                             "u": 0.0,
+                             "v": 0.0,
+                             "h": 0.0}
+                        ]
+                    }
+                },
+                "MASSMOVEMENT": {
+                    "regions": [
+                        {"region_name": "two",
+                         "thickness": 5.0
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
