@@ -6,6 +6,7 @@
             "out": 5.0
         },
         "OUTPUT": [
+            "water_surface",
             "bottom_elevation",
             "delta_z"
         ]
