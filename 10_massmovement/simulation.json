@@ -1,0 +1,14 @@
+{
+    "SIMULATION":{
+        "TIME": {
+            "start": 0.0,
+            "end": 540.0,
+            "out": 1.0
+        },
+        "OUTPUT": [
+            "water_surface",
+            "bottom_elevation",
+            "delta_z"
+        ]
+    }
+}
