@@ -13,7 +13,7 @@ for i = 1:4
 end
 
 % Load experimental results from MAT file
-load(fullfile('../Ref', 'experiment.mat'));
+load(fullfile('../Ref', 'Experiment.mat'));
 
 %% Parameters (for nondimensionalization)
 b = 122;        % half-width of movable bed [m]
