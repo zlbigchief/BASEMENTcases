@@ -51,7 +51,8 @@ my_factory   = TwoRegionBasinFactory(width=flume_length, height=flume_width, mid
 # Set the matID
 # Add region markers
 my_factory.regions = [
-    RegionMarker((b+flume_length/2)/2, 0, max_area=15, attribute=0),
+    RegionMarker( (b+flume_length/2)/2, 0, max_area=15, attribute=0),
+    RegionMarker(-(b+flume_length/2)/2, 0, max_area=15, attribute=0),
     RegionMarker(                   0, 0, max_area=15, attribute=1)
 ]
 
