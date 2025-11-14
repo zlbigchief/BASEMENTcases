@@ -1,7 +1,11 @@
+%% Initialization
 clear; clc; close all;
 
+%% Paths
+% assume current folder is 10_massmovement/Figures
 addpath('./private_mfiles');
 
+%% Load data
 % Load model results from CSV files
 modelData = cell(4, 1);
 for i = 1:4
@@ -11,7 +15,14 @@ end
 % Load experimental results from MAT file
 load(fullfile('../Ref', 'experiment.mat'));
 
-% Prepare figure for subplots
+%% Parameters (for nondimensionalization)
+b = 122;        % half-width of movable bed [m]
+h = 10;         % still water depth [m]
+g = 9.81;       % gravitational acceleration [m/s^2]
+x_probe_nd = [0, 20, 180, 400]; % non-dim probe locations
+x_probe = x_probe_nd * h + b;   % probe locations [m]
+
+%% Prepare figure
 fig = figure;
 SetFigureSize(fig, 8, 12)
 
@@ -22,14 +33,7 @@ tld = tiledlayout(subplotRows, subplotCols, 'TileSpacing', 'tight', 'Padding', '
 % Preallocate space for nondimensionalized data
 nondimModelData = cell(4, 1);
 
-% Define parameters for nondimensionalization (example parameters)
-b = 122; % half-width of movable bed [m]
-h = 10 ; % still water depth [m]
-g = 9.81; % gravitational acceleration [m/s^2]
-x_probe_nd = [0, 20, 180, 400]; % non-dimen probe locations
-x_probe = x_probe_nd * h + b; % probe locations [m],
-
-% Loop through each probe to create subplots
+%% Process data and create subplots (one tile per probe)
 for i = 1:4
     % Nondimensionalize model data
     xModel = modelData{i}.Time * sqrt(g/h) - (x_probe(i) - b) / h ; 
@@ -61,11 +65,12 @@ for i = 1:4
     ylim([-8 2] / 100)
 end
 
+%% Labels, annotations and finalize layout
 fontsize(tld, 8, 'points');
-
 addTileLabels(tld, 8)
-% Adjust layout
 sgtitle('Model-Experiment Comparison for Probes P1 to P4');
 
-% Save the figure
+%% Save figure
+disp('Saving figure as PNG...');
 exportgraphics(fig, 'model_experiment_comparison.png', 'Resolution', 300);
+disp('Figure saved.');
