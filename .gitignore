@@ -16,3 +16,6 @@
 # Ignore all .DS_Store files (macOS specific)
 .DS_Store
 **/.DS_Store
+
+# Ignore tar files
+**/*.tar
