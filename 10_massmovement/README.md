@@ -1,6 +1,7 @@
 # Case 10: Wave generation by sudden bottom downthrow (mass movement)
 
 ## Physical settings
+The settings for this simulation were covered in the series of flume experiment by  Hammack (1973) (see the paper in `10_massmovement/Ref`)
 - Geometry: long, rectangular flume `10000 m × 50 m` with constant still-water depth `h = 10 m`.
 - Regions: the bed is split into a central movable strip and two fixed flanks by two vertical lines at `x = ±b` with `b = 122 m` (measured from the flume centre). The central strip is tagged as `movable`, the outer strips as `fixed`.
 - Scenario: a sudden downthrow of the movable bottom generates a surface-gravity wave that propagates away from the source, following the laboratory configuration described in the reference paper in `10_massmovement/Ref`.
