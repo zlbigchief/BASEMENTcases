@@ -8,7 +8,6 @@ The settings for this simulation were covered in the series of flume experiment 
 ![Schematic](/10_massmovement/Physics/Schematic.jpg)
 
 ## Numerical settings
-- Unstructured triangular mesh: 51,861 cells, 27,919 nodes.
 - Time window: `0–540 s`, output interval `1 s`.
 - Timestep control: initial `0.02 s`, minimum `1e-4 s`, CFL limit `0.9`; minimum water depth `0.01 m`.
 - Mesh: unstructured triangular mesh with `51,861` cells and `27,919` nodes.
