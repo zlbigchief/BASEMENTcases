@@ -18,6 +18,10 @@ Those files can be found from in the /share/doc folder in the installation path.
 ## Simulation cases and file structure
 Below are introductions of the physical settings, computational stats and quick views of the results. For detailed documentations of each case please see the README.md in each case folder.
 
+### BASEmesh - tool for mesh generation (WIN and Linux OS, unavailabel for MacOS)
+BASEmesh was initially published as python plugin for the open source geographic information (GIS) software QGIS. Starting with version 2.0, BASEmesh is both a stand-alone python software as well as a plugin für QGIS. It integrates Jonathan Richard Shewchuk's excellent unstructured 2D-mesh generator 'Triangle' developed at the University of California at Berkeley. 
+The .2dm mesh files used in the cases were initially generated using the scripts in each case folder, which was adapted from the example python files in [BASEmesh repository](https://gitlab.ethz.ch/vaw/public/basemesh-v2/-/tree/master/examples/basechange?ref_type=heads). 
+
 ### Case 1: Open channel flow
 
 [More details in the case README](./01_openchannelflow/README.md)
